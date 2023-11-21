@@ -3,13 +3,16 @@ import './SearchResults.css';
 import Tracklist from '../Tracklist/Tracklist';
 
 
-function SearchResults({ searchResults }) {
+function SearchResults({ searchResults, onAdd }) {
     if(searchResults.length !== 0) {
     console.log(`in SearchResults.js searchResults: ${searchResults.length}`);
     }
+
+
+
     return (
         <div>
-          <Tracklist tracks={searchResults} />
+          <Tracklist tracks={searchResults} onAdd={onAdd} action="add"/>
         </div>
       );
 

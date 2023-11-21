@@ -1,0 +1,15 @@
+#lower-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-results, #playlist {
+    flex: 1;
+    margin: 10;
+}
+
+.App {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
