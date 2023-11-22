@@ -1,0 +1,14 @@
+/* Assuming your Tracklist component has a surrounding div with a class name */
+.Tracklist {
+    background-color: #fff; /* Or any color you prefer */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .Tracklist h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Add styles for individual track items here */
+  

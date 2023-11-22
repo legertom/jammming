@@ -27,7 +27,7 @@ function Playlist({ tracks, onRemove, playlistName, onNameChange, savePlaylist }
         </> 
       ) : (
         <>
-        <h2>{playlistName}</h2>
+        <h2 className="playlist-name">{playlistName}</h2>
         <button onClick={() => setIsEditing(true)} className="playlist-edit">
         EDIT NAME</button>
         </>
