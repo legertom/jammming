@@ -103,18 +103,22 @@ function App() {
           <div id="search-results">
             <SearchResults searchResults={searchResults} onAdd={addTrack} />
           </div>
-          <div id="playlist">
-            <Playlist
-              playlistName={playlistName}
-              onNameChange={changePlaylistName}
-              tracks={playlistTracks}
-              onRemove={removeTrack}
-              savePlaylist={savePlaylist}
-            />
+          {playlistTracks.length > 0 && 
+            <div id="playlist">
+              <Playlist
+                playlistName={playlistName}
+                onNameChange={changePlaylistName}
+                tracks={playlistTracks}
+                onRemove={removeTrack}
+                savePlaylist={savePlaylist}
+              />
+            </div>
+          }
+          
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

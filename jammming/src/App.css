@@ -23,7 +23,7 @@ html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
     color: white; /* Light text for better contrast */
-    position: relative;
+    
   }
   
   .App h1 {
