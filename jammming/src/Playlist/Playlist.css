@@ -32,7 +32,14 @@
     font-size: 16px;
   }
   
-.playlist-name {
-    color: black;
-}
-
+  .playlist-name {
+    font-size: 2em; /* Makes the text larger and more prominent */
+    color: #1db954; /* Spotify green for the text color */
+    text-align: center; /* Center-aligns the text */
+    margin: 20px 0; /* Adds some space above and below the title */
+    font-weight: bold; /* Makes the font bold */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 1px; /* Increases spacing between letters for a stylistic effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+  }
+  

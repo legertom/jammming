@@ -1,10 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: none; 
+  }
+  
+  #root, .App {
+    height: 100%;
+    width: 100%;
+    background-image: url('../public/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
 .App {
     margin: 0 auto;
     padding: 20px;
-    max-width: 1200px;
-    font-family: 'Arial', sans-serif; /* or any other font you prefer */
-    background-color: #282828; /* Dark background for the app */
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
     color: white; /* Light text for better contrast */
+    position: relative;
   }
   
   .App h1 {

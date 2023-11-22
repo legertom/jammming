@@ -34,6 +34,24 @@ const Spotify = {
         return jsonResponse.id;
       });
   },
+  getUserInfo(accessToken) {
+    return fetch('https://api.spotify.com/v1/me', {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsonResponse) => {
+        return {
+          name: jsonResponse.display_name,
+          followers: jsonResponse.followers.total,
+          image: jsonResponse.images[0].url,
+          profileUrl: jsonResponse.external_urls.spotify,
+        };
+      }); 
+  },
 
   createPlaylist(accessToken, playlistName) {
     return fetch("https://api.spotify.com/v1/me/", {

@@ -1,0 +1,50 @@
+.user-profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it sits above other content */
+  }
+  
+  .profile-image {
+    width: 70px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular profile images */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 2px solid #fff; /* Optional: white border around the image */
+    margin-bottom: 10px;
+  }
+  
+  .profile-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .profile-followers {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .profile-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #1db954; /* Spotify green */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-link:hover {
+    background-color: #1ed760; /* Lighter green on hover */
+  }
+  

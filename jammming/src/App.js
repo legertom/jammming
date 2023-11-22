@@ -2,7 +2,7 @@ import "./App.css";
 import SearchBar from "./SearchBar/SearchBar";
 import SearchResults from "./SearchResults/SearchResults";
 import Playlist from "./Playlist/Playlist";
-
+import UserProfile from "./UserProfile/UserProfile";
 import React, { useState, useEffect } from "react";
 import Spotify from "./Spotify";
 
@@ -15,6 +15,7 @@ function App() {
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [token, setToken] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
 
   const handleLogin = () => {
     window.location = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(
@@ -73,14 +74,27 @@ function App() {
       });
   };
 
+  useEffect(() => {
+    if(token) {
+      Spotify.getUserInfo(token).then((userInfo) => {
+        setUserInfo(userInfo);
+      });
+    }
+  }, [token]);
+
   return (
     <div className="App">
+      <div className="profile-box">
+      {!token && <button onClick={handleLogin}>Login to Spotify</button>}
+          {token && <UserProfile userInfo={userInfo} />}
+      </div>
+      
       <h1>
         Ja<span className="highlight">mmm</span>ing
       </h1>
       <div>
         <div>
-          {!token && <button onClick={handleLogin}>Login to Spotify</button>}
+          
         </div>
         <div id="search-bar">
           <SearchBar onSearch={handleSearch} />
